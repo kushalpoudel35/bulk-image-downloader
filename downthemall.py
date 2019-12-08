@@ -11,12 +11,13 @@ def downThemAll(site_url):
 	for link in soup.findAll('a', {'class': 'rel-link'}):		#This part can vary between websites. View page source for this.
 		href = link.get('href')
 		fullname = str(firstName) + str(imageNumber) + ".jpg"
-		print("Downloading " + fullname + " ...", end=' ')
+		print("Downloading {} ...".format(fullname), end=' ')
 		urllib.request.urlretrieve(href, fullname)
 		print("Downloaded.")
 		imageNumber = imageNumber + 1
 
-url = str(input("Hi there! This is a program that lets you download multiple images on a website at once.\nEnter the site url: "))
+print("Hi there! This is a program that lets you download multiple images on a website at once.")
+url = str(input("Enter the site url: "))
 
 downThemAll(url)
 input("Task completed. Press any key to exit...")
