@@ -1,2 +1,2 @@
-# bulk-image-downloader
-Download multiple images on a website at once.
+# python-scripts
+A collection of useful Python scripts.
